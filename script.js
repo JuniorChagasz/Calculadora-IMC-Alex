@@ -14,6 +14,7 @@ function calcular() {
     const alturaInput = document.getElementById('altura');
     const imcValor = document.getElementById('imc-valor');
     const imcClassificacao = document.getElementById('imc-classificacao');
+    const imcImagem = document.getElementById('imc-imagem');
 
     const peso = parseFloat(pesoInput.value);
     const altura = parseFloat(alturaInput.value);
@@ -23,9 +24,20 @@ function calcular() {
     if (resultado === "Valores inválidos") {
         imcValor.textContent = "Valores inválidos";
         imcClassificacao.textContent = "";
+        imcImagem.src = "";
     } else {
         imcValor.textContent = resultado;
-        imcClassificacao.textContent = classificarIMC(parseFloat(resultado));
+        const classificacao = classificarIMC(parseFloat(resultado));
+        imcClassificacao.textContent = classificacao;
+        const imagens = {
+            "Abaixo do peso": "../img/abaixo-do-peso.jpg",
+            "Peso normal": "../img/peso-normal.jpg",
+            "Sobrepeso": "../img/sobrepeso.jpg",
+            "Obesidade Grau 1": "../img/obesidade-1.jpg",
+            "Obesidade Grau 2": "../img/obesidade-2.jpg",
+            "Obesidade Grau 3": "../img/obesidade-3.jpg"
+        };
+        imcImagem.src = imagens[classificacao];
     }
 }
 
