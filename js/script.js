@@ -30,7 +30,7 @@ function calcular() {
         const classificacao = classificarIMC(parseFloat(resultado));
         imcClassificacao.textContent = classificacao;
         const imagens = {
-            "Abaixo do peso": "./img/abaixo-do-peso.jpg",
+            "Abaixo do peso": "../img/abaixo-do-peso.jpg",
             "Peso normal": "./img/peso-normal.jpg",
             "Sobrepeso": "./img/sobrepeso.jpg",
             "Obesidade Grau 1": "./img/obesidade-1.jpg",
