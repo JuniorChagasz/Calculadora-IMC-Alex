@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/sketchy.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Calculadora IMC De (ALEX)</title>
+</head>
+
+<body>
+    <header>
+        <h1>Calculadora De IMC</h1>
+    </header>
+    <main>
+        <div class="container">
+            <section>
+                <h2>Dados Pessoais</h2>
+                <div>
+                    <form action="enviar.php" method="post" id="formulario">
+                        <div>
+                            <label for="peso">Peso (KG)</label>
+                            <input type="number" id="peso" name="peso" placeholder="Qual o seu peso?" required>
+                        </div>
+
+                        <div>
+                            <label for="altura">Altura (M)</label>
+                            <input type="number" id="altura" name="altura" placeholder="Qual a sua altura?" required>
+                        </div>
+
+                        <div>
+                            <button type="button" id="calcular">Calcular IMC</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section>
+                <h2>Resultado</h2>
+                <div id="resultado">
+                    <p>Seu IMC é: <span id="imc-valor"></span></p>
+                    <p>Classificação: <span id="imc-classificacao"></span></p>
+                    <img id="imc-imagem" src="../img/imc-todos-pesos.webp" alt="Imagem de IMC">
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
+</body>
+<footer>
+    <p>&copy; 2023 created by Alex</p>
+</footer>
+
+</html>
