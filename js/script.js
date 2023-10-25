@@ -30,12 +30,12 @@ function calcular() {
         const classificacao = classificarIMC(parseFloat(resultado));
         imcClassificacao.textContent = classificacao;
         const imagens = {
-            "Abaixo do peso": "/img/abaixo-do-peso.jpg",
-            "Peso normal": "/img/peso-normal.jpg",
-            "Sobrepeso": "/img/sobrepeso.jpg",
-            "Obesidade Grau 1": "/img/obesidade-1.jpg",
-            "Obesidade Grau 2": "/img/obesidade-2.jpg",
-            "Obesidade Grau 3": "/img/obesidade-3.jpg"
+            "Abaixo do peso": "./img/abaixo-do-peso.jpg",
+            "Peso normal": "./img/peso-normal.jpg",
+            "Sobrepeso": "./img/sobrepeso.jpg",
+            "Obesidade Grau 1": "./img/obesidade-1.jpg",
+            "Obesidade Grau 2": "./img/obesidade-2.jpg",
+            "Obesidade Grau 3": "./img/obesidade-3.jpg"
         };
         imcImagem.src = imagens[classificacao];
     }
