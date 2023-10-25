@@ -60,6 +60,14 @@ button#calcular:hover {
 
 #resultado {
     margin-top: 20px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#imc-imagem img {
+    width: 100%;
+    height: 100%;
 }
 
 footer {
